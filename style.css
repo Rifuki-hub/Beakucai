@@ -1,0 +1,236 @@
+/* ==== FILE GABUNGAN style.css ==== */
+
+/* === Dasar === */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FA;
+}
+
+/* === Navigasi Umum === */
+.nav-link {
+    @apply text-white/80 hover:text-white transition-colors duration-200;
+}
+.nav-link.active {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+.nav-link.active span, .nav-link.active svg {
+    color: var(--color-accent);
+}
+
+/* === Mobile Nav === */
+.mobile-nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-accent);
+}
+
+/* === Dropdown Menu === */
+.group {
+    position: relative;
+}
+
+.group:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-menu, .submenu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.group::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1rem; /* Hover bridge */
+    z-index: 10;
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: translateY(10px);
+    margin-top: 0.25rem;
+}
+
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 0.25rem;
+    transform: translateX(10px);
+    display: none;
+}
+
+.group:hover > .dropdown-menu > .relative:hover > .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* === Search Bar (Desktop) === */
+#desktop-menu-items {
+    transition: max-width 0.4s ease-in-out, opacity 0.2s ease-in-out, margin-right 0.4s ease-in-out;
+    max-width: 500px;
+    opacity: 1;
+    visibility: visible;
+    white-space: nowrap;
+    margin-right: 0;
+}
+
+/* Tambahkan #main-nav di depannya */
+#main-nav #search-input {
+    transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: 1px solid transparent;
+}
+
+#search-toggle-button {
+    position: static;
+    color: white;
+}
+
+#main-nav.search-active #desktop-menu-items {
+    max-width: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+#main-nav.search-active #search-input {
+    width: 256px;
+    opacity: 1;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-color: #D1D5DB;
+}
+
+#main-nav.search-active #search-toggle-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4B5563;
+}
+
+/* === Mobile Menu Styles === */
+.mobile-menu-item {
+    @apply border-b border-white/10;
+}
+
+.mobile-menu-summary {
+    @apply flex items-center gap-3 w-full py-3 text-left text-base font-medium text-white hover:bg-white/10 rounded-md px-3 cursor-pointer;
+}
+
+.mobile-menu-summary.active {
+    @apply text-yellow-400 bg-white/10;
+}
+
+.mobile-menu-content {
+    @apply pl-8 pr-4 pb-2 space-y-1;
+}
+
+.mobile-menu-heading {
+    @apply text-yellow-400 font-semibold text-sm mt-2 mb-1;
+}
+
+.mobile-submenu-link {
+    @apply block py-2 text-white/70 hover:text-white;
+}
+
+/* === Card Styles === */
+.feature-card-v2 {
+    @apply bg-white/5 border border-white/10 rounded-lg p-6 text-center transition-all duration-300 ease-in-out transform hover:bg-white/10 hover:-translate-y-1;
+}
+
+.news-card {
+    @apply card overflow-hidden;
+    transition: box-shadow 0.3s;
+}
+
+.news-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.commitment-bg {
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+}
+
+/* === Statistik / KPI Cards === */
+.kpi-card {
+    @apply card p-6 card-interactive;
+}
+
+.kpi-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0;
+}
+
+.kpi-title {
+    @apply text-sm text-gray-500;
+}
+
+.kpi-value {
+    @apply text-2xl font-bold text-gray-800;
+}
+
+/* === Tooltip & Legend (ApexCharts) === */
+.apexcharts-tooltip {
+    @apply bg-white border border-gray-200 shadow-lg rounded-lg;
+}
+
+.apexcharts-tooltip-title {
+    @apply bg-gray-100 py-2 px-4 font-semibold text-gray-800;
+}
+
+.apexcharts-tooltip-series-group {
+    @apply p-2;
+}
+
+.apexcharts-legend-text {
+    @apply text-gray-600 !important;
+}
+
+/* === Tracking Form === */
+#tracking-form input[type="text"] {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* === Timeline Result Section === */
+#results-section .timeline-item {
+    @apply mb-10 ml-6;
+}
+
+#results-section .timeline-icon {
+    @apply absolute flex items-center justify-center w-8 h-8 rounded-full -left-4 ring-8 ring-white;
+}
+
+/* === Summary Tag Styles === */
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}

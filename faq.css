@@ -1,0 +1,63 @@
+/* File: faq.css */
+
+/* Hero Section on Main FAQ Page */
+.faq-hero {
+    @apply bg-cover bg-center py-20 sm:py-24 text-white;
+    background-color: var(--color-primary);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(13, 40, 95, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 90%, rgba(13, 40, 95, 0.9) 0%, transparent 40%);
+}
+
+.faq-hero h1 {
+    color: var(--color-text-light);
+}
+
+/* FAQ Accordion Item Styles */
+.faq-item {
+    @apply bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 ease-in-out;
+}
+
+.faq-item:hover {
+    @apply shadow-lg;
+}
+
+.faq-item[open] {
+    @apply ring-2 ring-yellow-400;
+}
+
+.faq-question {
+    @apply flex justify-between items-center w-full p-5 font-semibold text-gray-800 text-left cursor-pointer;
+    list-style: none; /* Remove default marker */
+}
+
+.faq-question::-webkit-details-marker {
+    display: none; /* Hide for Safari */
+}
+
+.faq-answer {
+    @apply px-5 pb-5 text-gray-600 border-t border-gray-200;
+}
+
+.faq-icon {
+    @apply w-5 h-5 text-gray-500 transition-transform duration-300;
+}
+
+.faq-item[open] .faq-icon {
+    @apply rotate-180;
+}
+
+/* Sidebar on Detail Page */
+.sidebar-link {
+    @apply block p-3 rounded-lg text-gray-700 hover:bg-gray-100 font-medium transition-colors;
+}
+
+.sidebar-link.active {
+    @apply bg-blue-100 text-blue-700 font-bold;
+}
+
+/* Prose styling for article content */
+.prose p { @apply text-gray-700 leading-relaxed my-4; }
+.prose ul { @apply list-disc pl-6 space-y-2; }
+.prose li { @apply text-gray-700; }
+.prose strong { @apply font-semibold text-gray-800; }

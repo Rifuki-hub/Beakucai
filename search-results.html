@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Pencarian | Bea Cukai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="perbaikan.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <header class="bg-[#0A2351] sticky top-0 z-50 shadow-md">
+        <div class="bg-black/20 text-white/70 text-xs">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-2">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-1.5"><i data-lucide="phone" class="w-4 h-4"></i><span>Call Center: 1500-225</span></div>
+                        <div class="hidden sm:flex items-center gap-1.5"><i data-lucide="map-pin" class="w-4 h-4"></i><span>Jakarta, Indonesia</span></div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="font-semibold text-white">Bahasa Indonesia</a>
+                        <span class="text-white/50">|</span>
+                        <a href="#" class="hover:text-white">EN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" id="main-nav">
+            <div class="flex justify-between items-center h-20">
+                <a href="loading.html" class="flex items-center gap-3 flex-shrink-0">
+                    <img src="bea-cukai.png" alt="Bea Cukai Logo" class="h-12">
+                    <div>
+                        <h1 class="text-white font-bold text-lg leading-tight">Kementrian Keuangan</h1>
+                        <p class="text-white/70 text-xs leading-tight">Direktorat Jenderal Bea dan Cukai</p>
+                    </div>
+                </a>
+
+                <div id="desktop-menu-items" class="hidden lg:flex items-center gap-6 text-sm font-medium pl-[130px]">
+                    <a href="loading.html" class="nav-link active flex items-center gap-2"><i data-lucide="home" class="w-5 h-5"></i><span>Beranda</span></a>
+
+                    <div class="relative group">
+                        <button type="button" class="nav-link text-white/80 hover:text-white flex items-center gap-2">
+                            <i data-lucide="user-circle" class="w-5 h-5"></i>
+                            <span>Profil</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-60 bg-white rounded-md shadow-lg py-2 z-20">
+                            <a href="about-us.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Organisasi</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kantor Bea dan Cukai</a>
+                            <div class="relative group">
+                                <a href="#" class="flex justify-between items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                    <span>Unit Khusus</span>
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </a>
+                                <div class="submenu absolute top-0 left-full ml-1 w-60 bg-white rounded-md shadow-lg py-2 z-30">
+                                    <a href="customnarcoticsteam.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Customs Narcotics Team</a>
+                                    <a href="k9unit.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">K-9 Unit</a>
+                                    <a href="marinecustoms.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Marine Customs</a>
+                                    <a href="customsenforcementteam.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Customs Enforcement Team</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <button class="nav-link text-white/80 hover:text-white flex items-center gap-2">
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                            <span>Layanan & Panduan</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="dropdown-menu absolute top-full right-0 -mr-24 mt-2 w-[64rem] z-20">
+                            <div class="bg-white rounded-md shadow-lg">
+                                <div class="p-8 grid grid-cols-3 gap-12">
+                                    <div>
+                                        <h3 class="font-bold text-sm uppercase text-gray-400 mb-4">Untuk Anda</h3>
+                                        <ul class="space-y-4">
+                                            <li><a href="lacak-kiriman.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Layanan Kiriman</div>
+                                                    <p class="text-sm text-gray-500">Lacak Status Barang Kiriman Anda.</p>
+                                                </a>
+                                            </li>
+                                            <li><a href="faq.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Tanya Jawab (FAQ)</div>
+                                                    <p class="text-sm text-gray-500">Jawaban untuk pertanyaan umum.</p>
+                                                </a>
+                                            </li>
+                                            <li><a href="website.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 hover:text-blue-600"><a href="website.html">Website</a></div>
+                                                    <p class="text-sm text-gray-500">Informasi website untuk anda.</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-sm uppercase text-gray-400 mb-4">Regulasi & Fasilitas</h3>
+                                        <ul class="space-y-4">
+                                            <li><a href="#" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Pabean</div>
+                                                    <p class="text-sm text-gray-500">Aturan & prosedur impor-ekspor.</p>
+                                                </a></li>
+                                            <li><a href="indeks-cukai.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Cukai</div>
+                                                    <p class="text-sm text-gray-500">Aturan & prosedur barang kena cukai.</p>
+                                                </a></li>
+                                            <li><a href="#" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Fasilitas</div>
+                                                    <p class="text-sm text-gray-500">KITE, Kawasan Berikat, dan lainnya.</p>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-sm uppercase text-gray-400 mb-4">Transparansi Publik</h3>
+                                        <ul class="space-y-4">
+                                            <li><a href="layanan-informasi-publik.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Layanan Informasi Publik</div>
+                                                    <p class="text-sm text-gray-500">Ajukan permintaan informasi resmi (PPID).</p>
+                                                </a></li>
+                                            <li><a href="statistik.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Statistik</div>
+                                                    <p class="text-sm text-gray-500">Data perdagangan, penerimaan, dan lainnya.</p>
+                                                </a></li>
+                                            <li><a href="layanan-publik.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 group-hover/item:text-blue-600">Layanan Publik</div>
+                                                    <p class="text-sm text-gray-500">Informasi mengenai layanan publik kami.</p>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-sm uppercase text-gray-400 mb-4">Layanan Pengaduan</h3>
+                                        <ul class="space-y-4">
+                                            <li><a href="PM-halaman-utama.html" class="group/item">
+                                                    <div class="font-semibold text-gray-800 hover:text-blue-600">Pengaduan Masyarakat</div>
+                                                    <p class="text-sm text-gray-500">Ajukan pengaduan masyarakat secara online.</p>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="media-center.html" class="nav-link text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5"></i><span>Informasi Publik</span></a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <div id="search-container">
+                        <form id="search-form" class="relative flex items-center" 
+                            action="search-results.html" 
+                            method="GET">
+                            
+                            <input type="text" id="search-input" name="q" placeholder="Cari informasi..."
+                                class="bg-white text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400 h-10">
+
+                            <input type="hidden" name="category" value="semua">
+
+                            <button id="search-toggle-button" type="button" class="nav-link p-2">
+                                <i data-lucide="search" id="search-icon-open" class="w-5 h-5"></i>
+                                <i data-lucide="x" id="search-icon-close" class="w-5 h-5 hidden"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <button class="lg:hidden text-white" id="mobile-menu-button" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="w-7 h-7" id="menu-icon-open"></i>
+                        <i data-lucide="x" class="w-7 h-7 hidden" id="menu-icon-close"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hidden lg:hidden absolute top-full left-0 w-full bg-[#0A2351] h-[calc(100vh-80px)] overflow-y-auto" id="mobile-menu">
+                <div class="p-4 space-y-2">
+                    <a href="loading.html" class="mobile-nav-link active flex items-center gap-4 p-3 rounded-md font-semibold">
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                        <span>Beranda</span>
+                    </a>
+                    <details class="group">
+                        <summary class="flex items-center justify-between gap-4 p-3 rounded-md text-white/90 hover:bg-white/10 cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <i data-lucide="user-circle" class="w-6 h-6"></i>
+                                <span>Profil</span>
+                            </div>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="mt-1 pl-10 space-y-1">
+                            <a href="about-us.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Organisasi</a>
+                            <a href="#" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Kantor Bea dan Cukai</a>
+                            <details class="group/mobile">
+                                <summary class="flex justify-between items-center p-2 rounded-md text-white/80 hover:bg-white/10 cursor-pointer">
+                                    <span>Unit Khusus</span>
+                                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open/mobile:rotate-180"></i>
+                                </summary>
+                                <div class="pl-4 border-l-2 border-white/10 ml-2">
+                                    <a href="customnarcoticsteam.html" class="block p-2 text-sm rounded-md text-white/70 hover:bg-white/10">Customs Narcotics Team</a>
+                                    <a href="k9unit.html" class="block p-2 text-sm rounded-md text-white/70 hover:bg-white/10">K-9 Unit</a>
+                                    <a href="marinecustoms.html" class="block p-2 text-sm rounded-md text-white/70 hover:bg-white/10">Marine Customs</a>
+                                    <a href="customsenforcementteam.html" class="block p-2 text-sm rounded-md text-white/70 hover:bg-white/10">Customs Enforcement Team</a>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+                    <details class="group">
+                        <summary class="flex items-center justify-between gap-4 p-3 rounded-md text-white/90 hover:bg-white/10 cursor-pointer">
+                            <div class="flex items-center gap-4">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                                <span>Layanan & Panduan</span>
+                            </div>
+                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="mt-2 pl-6 space-y-3">
+                            <div>
+                                <h3 class="px-4 py-1 text-yellow-400 font-bold text-sm">UNTUK ANDA</h3>
+                                <div class="pl-4 space-y-1">
+                                    <a href="lacak-kiriman.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Lacak Kiriman</a>
+                                    <a href="faq.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Tanya Jawab (FAQ)</a>
+                                    <a href="website.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Website</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="px-4 py-1 text-yellow-400 font-bold text-sm">REGULASI & FASILITAS</h3>
+                                <div class="pl-4 space-y-1">
+                                    <a href="#" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Pabean</a>
+                                    <a href="indeks-cukai.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Cukai</a>
+                                    <a href="#" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Fasilitas</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="px-4 py-1 text-yellow-400 font-bold text-sm">TRANSPARANSI PUBLIK</h3>
+                                <div class="pl-4 space-y-1">
+                                    <a href="layanan-publik.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Layanan Publik</a>
+                                    <a href="layanan-informasi-publik.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Layanan Informasi Publik</a>
+                                    <a href="statistik.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Statistik</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="px-4 py-1 text-yellow-400 font-bold text-sm">Layanan Pengaduan</h3>
+                                <div class="pl-4 space-y-1">
+                                    <a href="PM-halaman-utama.html" class="block p-2 rounded-md text-white/80 hover:bg-white/10">Pengaduan Masyarakat</a>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <a href="media-center.html" class="mobile-nav-link flex items-center gap-4 p-3 rounded-md text-white/90 hover:bg-white/10">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                        <span>Informasi Publik</span>
+                    </a>
+                    <div class="pt-4 border-t border-white/20">
+                        <form class="relative">
+                            <input type="text" placeholder="Cari informasi..." class="w-full h-11 bg-white/10 rounded-md pl-4 pr-10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            <button type="submit" class="absolute right-0 top-0 h-full px-3 text-white/60 hover:text-white" aria-label="Search">
+                                <i data-lucide="search" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <!-- Bagian Breadcrumb dan Judul Halaman -->
+        <section class="bg-gray-100 py-4 border-b">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <nav class="flex items-center text-sm text-gray-500" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2">
+                        <li><a href="loading.html" class="hover:text-gray-700 flex items-center gap-1"><i data-lucide="home" class="w-4 h-4"></i> Beranda</a></li>
+                        <li><i data-lucide="chevron-right" class="w-4 h-4"></i></li>
+                        <li class="font-semibold text-gray-800" aria-current="page">Pencarian</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+    <div class="max-w-4xl mx-auto py-12 px-4">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Pencarian Informasi</h2>
+            <p class="mt-2 text-lg text-slate-600">Temukan peraturan, kurs pajak, dan berita terbaru.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-10">
+            <form id="search-form-result" class="flex flex-col sm:flex-row items-center gap-4">
+                <div class="relative w-full flex-grow">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i data-lucide="search" class="w-5 h-5 text-slate-400"></i>
+                    </div>
+                    <input type="text" id="page-search-input" name="q" placeholder="Ketik kata kunci..." class="w-full pl-10 pr-4 py-2.5 border border-slate-300 rounded-lg bg-slate-50 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                </div>
+                <select id="search-category" name="category" class="w-full sm:w-auto border border-slate-300 rounded-lg px-4 py-2.5 bg-slate-50 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                    <option value="semua">Semua Kategori</option>
+                    <option value="peraturan">Peraturan</option>
+                    <option value="kurs">Kurs Pajak</option>
+                    <option value="berita">Berita</option>
+                </select>
+                <button type="submit" class="w-full sm:w-auto flex-shrink-0 bg-indigo-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="search" class="w-4 h-4"></i>
+                    <span>Cari</span>
+                </button>
+            </form>
+        </div>
+        
+        <div id="loader" class="hidden text-center py-10">
+            <div class="w-8 h-8 border-4 border-slate-200 border-t-indigo-600 rounded-full animate-spin mx-auto"></div>
+            <p class="mt-4 text-slate-500">Mencari hasil...</p>
+        </div>
+
+        <div id="search-results-container">
+            <div id="search-results-header"></div>
+            <div id="search-results" class="space-y-4"></div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="bg-[#0A2351] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- About -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center gap-4 mb-4">
+                        <img src="bea-cukai.png" alt="Logo Kemenkeu" class="h-16">
+                        <div>
+                            <h1 class="text-white font-bold text-lg leading-tight">Kementerian Keuangan</h1>
+                            <p class="text-white/70 text-sm leading-tight">Direktorat Jenderal Bea dan Cukai</p>
+                        </div>
+                    </a>
+                    <p class="text-white/70 mt-4">Mengawal lalu lintas barang dan melayani Indonesia dengan profesional, transparan, dan penuh integritas.</p>
+                </div>
+
+                <!-- Layanan Utama -->
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Layanan Utama</h5>
+                    <ul class="space-y-3">
+                        <li><a href="lacak-kiriman.html" class="text-white/70 hover:text-white">Lacak Kiriman</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Portal PPID</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">CEISA</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Kalkulator Pabean</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informasi -->
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Informasi</h5>
+                    <ul class="space-y-3">
+                        <li><a href="berita.html" class="text-white/70 hover:text-white">Berita</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white">Peraturan</a></li>
+                        <li><a href="statistik.html" class="text-white/70 hover:text-white">Statistik</a></li>
+                        <li><a href="faq.html" class="text-white/70 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Kontak</h5>
+                    <ul class="space-y-3 text-white/70">
+                        <li class="flex items-start gap-2"><i data-lucide="phone" class="w-4 h-4 mt-1 flex-shrink-0"></i> Call Center: 1500-225</li>
+                        <li class="flex items-start gap-2"><i data-lucide="message-square" class="w-4 h-4 mt-1 flex-shrink-0"></i> WhatsApp: +62 811 1500 225</li>
+                        <li class="flex items-start gap-2"><i data-lucide="mail" class="w-4 h-4 mt-1 flex-shrink-0"></i> info@beacukai.go.id</li>
+                        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-1 flex-shrink-0"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p class="text-white/70">&copy; 2025 Direktorat Jenderal Bea dan Cukai. Hak Cipta Dilindungi.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="text-white/70 hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-white/70 hover:text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-white/70 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-white/70 hover:text-white"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mockData = {
+            peraturan: [ { title: "Peraturan Menteri Keuangan No. 123/2025", url: "#", snippet: "Tentang penetapan tarif bea masuk atas barang impor dalam rangka skema Perjanjian Perdagangan Bebas." }, { title: "Peraturan Dirjen Bea Cukai No. 45/2025", url: "#", snippet: "Petunjuk teknis pelaksanaan dan pelaporan barang kiriman dari luar negeri untuk individu." } ],
+            kurs: [ { title: "Kurs Pajak Mingguan USD 15,485.00", url: "#", snippet: "Berlaku untuk periode tanggal 19 Juli sampai dengan 25 Juli 2025." }, { title: "Kurs Pajak Mingguan EUR 16,892.50", url: "#", snippet: "Berlaku untuk periode tanggal 19 Juli sampai dengan 25 Juli 2025." } ],
+            berita: [ { title: "Bea Cukai Sukses Terapkan Implementasi CEISA 4.0", url: "#", snippet: "Sistem baru ini berhasil meningkatkan efisiensi dan kecepatan proses customs clearance barang impor." }, { title: "Kerjasama Bea Cukai Indonesia dengan APEC Ditingkatkan", url: "#", snippet: "Fokus kerjasama adalah untuk mendorong fasilitasi perdagangan digital yang aman dan transparan lintas batas." } ]
+        };
+        const iconMap = { peraturan: `<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center"><i data-lucide="file-text"></i></div>`, kurs: `<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-100 text-green-600 flex items-center justify-center"><i data-lucide="dollar-sign"></i></div>`, berita: `<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center"><i data-lucide="newspaper"></i></div>`, };
+        const categoryNames = { peraturan: 'Peraturan', kurs: 'Kurs Pajak', berita: 'Berita' };
+        
+        // ==========================================================
+        // === SCRIPT YANG DIRANCANG ULANG UNTUK EFEKTIVITAS      ===
+        // ==========================================================
+
+        // Ambil referensi elemen DOM sekali saja
+        const loader = document.getElementById('loader');
+        const resultsContainer = document.getElementById('search-results-container');
+        const resultsHeader = document.getElementById('search-results-header');
+        const resultsDiv = document.getElementById('search-results');
+        const searchForm = document.getElementById('search-form-result');
+        const searchInput = document.getElementById('page-search-input');
+        const categorySelect = document.getElementById('search-category');
+
+        /**
+         * FUNGSI 1: Melakukan pencarian (simulasi async)
+         * Mengembalikan sebuah Promise yang berisi hasil filter.
+         */
+        function performSearch(query, category) {
+            return new Promise(resolve => {
+                // Simulasi jeda waktu (misal: 750ms) seperti mengambil data dari server
+                setTimeout(() => {
+                    let initialList = [];
+                    
+                    // NEW: Jika query kosong, ambil semua item dari semua kategori.
+                    if (!query || query.trim() === '') {
+                        Object.keys(mockData).forEach(cat => {
+                            mockData[cat].forEach(item => initialList.push({ ...item, category: cat }));
+                        });
+                        resolve(initialList);
+                        return; // Selesai lebih awal
+                    }
+                    
+                    // Jika query TIDAK kosong, lanjutkan logika filter seperti biasa.
+                    if (category === "semua") {
+                        Object.keys(mockData).forEach(cat => {
+                            mockData[cat].forEach(item => initialList.push({ ...item, category: cat }));
+                        });
+                    } else if (mockData[category]) {
+                        mockData[category].forEach(item => initialList.push({ ...item, category: category }));
+                    }
+                    
+                    const filteredResults = initialList.filter(item => 
+                        item.title.toLowerCase().includes(query.toLowerCase()) ||
+                        item.snippet.toLowerCase().includes(query.toLowerCase())
+                    );
+                    
+                    resolve(filteredResults);
+                }, 750);
+            });
+        }
+
+        /**
+         * FUNGSI 2: Menampilkan hasil ke layar
+         * Fungsi ini hanya bertugas merender HTML dari data yang sudah siap.
+         */
+        function displayResults(results, query) {
+            resultsHeader.innerHTML = "";
+            resultsDiv.innerHTML = "";
+
+            // NEW: Logika header yang disesuaikan untuk query kosong
+            if (!query || query.trim() === '') {
+                resultsHeader.innerHTML = `<h3 class="text-lg font-medium text-slate-700 mb-2">Menampilkan <strong>${results.length}</strong> item yang tersedia.</h3>`;
+            } else if (results.length > 0) {
+                resultsHeader.innerHTML = `<h3 class="text-lg font-medium text-slate-700 mb-2">Menampilkan <strong>${results.length}</strong> hasil untuk "<strong>${query}</strong>"</h3>`;
+            } else { // results.length === 0
+                resultsDiv.innerHTML = `<div class="text-center bg-white rounded-lg p-12 shadow-md"><i data-lucide="search-x" class="w-16 h-16 mx-auto mb-4 text-slate-400"></i><h3 class="text-xl font-semibold text-slate-700">Tidak Ada Hasil</h3><p class="text-slate-500 mt-2">Kami tidak dapat menemukan hasil untuk "<strong>${query}</strong>".</p><p class="text-sm text-slate-400 mt-1">Coba gunakan kata kunci lain.</p></div>`;
+            }
+
+            results.forEach(item => {
+                const div = document.createElement("div");
+                div.className = "bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-lg hover:border-indigo-300 transition-all duration-300";
+                const categoryName = categoryNames[item.category] || 'Lainnya';
+                const categoryBadgeClass = { peraturan: 'bg-blue-100 text-blue-800', kurs: 'bg-green-100 text-green-800', berita: 'bg-orange-100 text-orange-800' }[item.category];
+                div.innerHTML = `<div class="flex items-start gap-4">${iconMap[item.category] || ''}<div class="flex-grow"><div class="flex justify-between items-start"><h3 class="text-lg font-semibold text-indigo-700 leading-tight"><a href="${item.url}" class="hover:underline">${item.title}</a></h3><span class="text-xs font-medium px-2 py-1 rounded-full ${categoryBadgeClass}">${categoryName}</span></div><p class="text-sm text-slate-600 mt-1">${item.snippet}</p></div></div>`;
+                resultsDiv.appendChild(div);
+            });
+            lucide.createIcons();
+        }
+
+        /**
+         * FUNGSI 3: Fungsi utama yang mengontrol alur pencarian
+         */
+        async function handleSearch(query, category) {
+            // 1. Tampilkan loader dan sembunyikan hasil sebelumnya
+            loader.style.display = 'block';
+            resultsContainer.style.display = 'none';
+
+            // 2. Lakukan pencarian dan tunggu hasilnya (await)
+            const results = await performSearch(query, category);
+            
+            // 3. Sembunyikan loader dan tampilkan kembali kontainer hasil
+            loader.style.display = 'none';
+            resultsContainer.style.display = 'block';
+
+            // 4. Tampilkan hasil yang sudah didapat
+            displayResults(results, query);
+        }
+
+        // Ambil parameter dari URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return { q: params.get("q") || "", category: params.get("category") || "semua" };
+        }
+
+        // Inisialisasi halaman
+        window.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+            const { q, category } = getQueryParams();
+            searchInput.value = q;
+            categorySelect.value = category;
+
+            // NEW: Jika tidak ada query di URL, tampilkan semua hasil.
+            if (!q || q.trim() === '') {
+                handleSearch('', category); 
+            } else {
+                handleSearch(q, category);
+            }
+        });
+
+        // Handle form submit
+        searchForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const query = searchInput.value.trim();
+            const category = categorySelect.value;
+            
+            const url = new URL(window.location);
+            url.searchParams.set("q", query);
+            url.searchParams.set("category", category);
+            window.history.pushState({}, "", url);
+            
+            handleSearch(query, category);
+        });
+
+        // Handle back/forward button di browser
+        window.addEventListener('popstate', () => {
+            const { q, category } = getQueryParams();
+            searchInput.value = q;
+            categorySelect.value = category;
+            
+            // NEW: Logika yang sama seperti DOMContentLoaded
+            if (!q || q.trim() === '') {
+                handleSearch('', category);
+
+            } else {
+                handleSearch(q, category);
+            }
+        });
+    </script>
+
+</body>
+</html>
